@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Heroes";
+}
+
+<div class="heroes">
+    <h1>Герои</h1>
+    <div class="power">
+        <img src="https://dota2.ru/img/icon-str.png">
+        <span>Сила</span>
+    </div>
+    <div class="powerHeroes power">
+
+        <a href="@Url.Action("abaddon", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/abaddon/m_icon.jpg">
+        </a>
+        <a href="@Url.Action("alchemist", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/alchemist/m_icon.jpg">
+        </a>
+        <a href="@Url.Action("axe", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/axe/m_icon.jpg">
+        </a>
+        <a href="@Url.Action("beastmaster", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/beastmaster/m_icon.jpg">
+        </a>
+        <a href="@Url.Action("bristleback", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/bristleback/m_icon.jpg" id="imgZoom">
+        </a>
+        <a href="@Url.Action("centaur_warrunner", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/centaur_warrunner/m_icon.jpg" id="imgZoom">
+        </a>
+        <a href="@Url.Action("chaos_knight", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/chaos_knight/m_icon.jpg" id="imgZoom">
+        </a>
+        <a href="@Url.Action("clockwerk", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/clockwerk/m_icon.jpg" id="imgZoom">
+        </a>
+        <a href="@Url.Action("doom", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/doom/m_icon.jpg" id="imgZoom">
+        </a>
+        <a href="@Url.Action("dragon_knight", "Home/Hero")">
+            <img src="https://dota2.ru/img/heroes/dragon_knight/m_icon.jpg" id="imgZoom">
+        </a>
+    </div>
+    <div class="power">
+        <img src="https://dota2.ru/img/icon-agi.png">
+        <span>Ловкость</span>
+    </div>
+    <div class="agilityHeroes power">
+        <a href="">
+            <img src="https://dota2.ru/img/heroes/abaddon/m_icon.jpg" id="imgZoom">
+        </a>
+    </div>
+    <div class="power">
+        <img src="https://dota2.ru/img/icon-int.png">
+        <span>Интеллект</span>
+    </div>
+    <div class="intelligenceHeroes power">
+        <a href="">
+            <img src="https://dota2.ru/img/heroes/abaddon/m_icon.jpg" id="imgZoom">
+        </a>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Dota2.Models.Hero>
+@using System.Linq;
+@{
+    var rand = new Random();
+}
+
+@{
+    ViewBag.Title = "Hero";
+}
+
+<div class="hero">
+    <h1>Какой-то герой</h1>
+    <div class="heroCharacteristic">
+        <h2>Характеристика</h2>
+        <table class="tableCharacteristic">
+            <tr>
+                <td id="charactColumn">
+                    <img src="https://dota2.ru/img/icons/overviewicon_str.png" title="Сила">
+                </td>
+                <td colspan="3">@Generator.GetRandomNumber(11, 35) + @Generator.GetRandomNumber(1.5, 3.0)</td>
+            </tr>
+            <tr>
+                <td id="charactColumn">
+                    <img src="https://dota2.ru/img/icons/overviewicon_agi.png" title="Ловкость">
+                </td>
+                <td colspan="3">@Generator.GetRandomNumber(12, 38) + @Generator.GetRandomNumber(1.2, 3.2)</td>
+            </tr>
+            <tr>
+                <td id="charactColumn">
+                    <img src="https://dota2.ru/img/icons/overviewicon_int.png" title="Интеллект">
+                </td>
+                <td colspan="3">@Generator.GetRandomNumber(15, 40) + @Generator.GetRandomNumber(1.1, 3.2)</td>
+            </tr>
+            <tr>
+                <td id="charactColumn">
+                    <img src="https://dota2.ru/img/icons/overviewicon_attack.png" title="Урон">
+                </td>
+                <td colspan="3">@Generator.GetRandomNumber(20, 45) + @Generator.GetRandomNumber(46, 80)</td>
+            </tr>
+            <tr>
+                <td id="charactColumn">
+                    <img src="https://dota2.ru/img/icons/overviewicon_defense.png" title="Защита">
+                </td>
+                <td colspan="3">@Generator.GetRandomNumber(-5, 7)</td>
+            </tr>
+            <tr>
+                <td id="charactColumn">
+                    <img src="https://dota2.ru/img/icons/overviewicon_speed.png" title="Скорость передвижения   ">
+                </td>
+                <td colspan="3">@Generator.GetRandomNumber(240, 360)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Уровень</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Урон</th>
+                <td>@Generator.GetRandomNumber(30, 50) - @Generator.GetRandomNumber(51, 70)</td>
+                <td>@Generator.GetRandomNumber(71, 90) - @Generator.GetRandomNumber(91, 110)</td>
+                <td>@Generator.GetRandomNumber(111, 130) - @Generator.GetRandomNumber(131, 150)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Здоровье</th>
+                <td>@Generator.GetRandomNumber(450, 720)</td>
+                <td>@Generator.GetRandomNumber(1300, 1600)</td>
+                <td>@Generator.GetRandomNumber(1800, 2500)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Мана</th>
+                <td>@Generator.GetRandomNumber(300, 450)</td>
+                <td>@Generator.GetRandomNumber(600, 750)</td>
+                <td>@Generator.GetRandomNumber(900, 1150)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Защита</th>
+                <td>@Generator.GetRandomNumber(0.1, 3.2)</td>
+                <td>@Generator.GetRandomNumber(5.2, 7.6)</td>
+                <td>@Generator.GetRandomNumber(8.8, 11.9)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Время атаки</th>
+                <td>@Generator.GetRandomNumber(1.8, 2.4)</td>
+                <td>@Generator.GetRandomNumber(1.4, 1.7)</td>
+                <td>@Generator.GetRandomNumber(1.01, 1.3)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Атак в секунду</th>
+                <td>@Generator.GetRandomNumber(0.3, 0.7)</td>
+                <td>@Generator.GetRandomNumber(0.8, 0.9)</td>
+                <td>@Generator.GetRandomNumber(1.0, 1.3)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Дальность обзора</th>
+                <td colspan="3">@Generator.GetRandomNumber(1200, 2000) / @Generator.GetRandomNumber(400, 1000)</td>
+            </tr>
+            <tr>
+                <th id="charactColumn">Дальность атаки</th>
+                <td colspan="3">@Generator.GetRandomNumber(150, 500)</td>
+            </tr>
+        </table>
+    </div>
+    <div class="heroImage">
+        <img src='https://dota2.ru/img/heroes/@Html.Id()/m_icon.jpg' class="heroImage">
+        
+    </div>
+    <div class="heroHistory">
+        <h2>История</h2>
+        @foreach (Dota2.Models.Hero hero in Model.Where(m => m.Name == Html.Id()))
+        {
+            <p>@hero.History</p>
+        }
+    </div>
+</div>
