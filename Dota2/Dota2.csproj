@@ -174,12 +174,14 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\BigImgOfHeroes\abaddonIcon.png" />
     <Content Include="Images\BigImgOfHeroes\axeIcon.png" />
+    <Content Include="Images\HeroesIconsGifs\abaddonIconGif.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\heroGifScript.js" />
     <Content Include="Scripts\heroScript.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
