@@ -34,15 +34,16 @@ namespace Dota2.Controllers
            
             return View();
         }
-        //public ActionResult Hero()
-        //{
-        //        return View();
-        //}
         
         public ActionResult Hero()
         {
            
             return View(db.Heroes);
+        }
+
+        public ActionResult Stream()
+        {
+            return View();
         }
 
        

@@ -2,6 +2,10 @@
 @using System.Linq;
 @{
     var rand = new Random();
+    var path = "/Images/HeroesIcons/" + @Html.Id() + ".gif";
+    var heroName = @Html.Id();
+    heroName = (heroName.Substring(0, 1).ToUpper() + heroName.Remove(0, 1)).Replace('_',' ');
+    
 }
 
 @{
@@ -9,7 +13,7 @@
 }
 
 <div class="hero">
-    <h1>Какой-то герой</h1>
+    <h1>@heroName</h1>
     <div class="heroCharacteristic">
         <h2>Характеристика</h2>
         <table class="tableCharacteristic">
@@ -102,7 +106,8 @@
         </table>
     </div>
     <div class="heroImage">
-        <img src='https://dota2.ru/img/heroes/@Html.Id()/m_icon.jpg' class="heroImage">
+        @*<img src='https://dota2.ru/img/heroes/@Html.Id()/m_icon.jpg' class="heroImage">*@
+        <img src=@path ; class="heroImage"> 
     </div>
     <div class="heroHistory">
         <h2>История</h2>

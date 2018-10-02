@@ -8,7 +8,7 @@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script defer type="text/javascript" src="heroGifScript.js"></script>
+    <script defer type="text/javascript" src="~/scripts/heroGifScript.js"></script> 
 </head>
 <body>
     <header>
@@ -20,6 +20,7 @@
                     <ul>
                         <li>@Html.ActionLink("Герои", "Heroes")</li>
                         <li><a href="">Предметы</a></li>
+                        <li><a href="">Карта</a></li> 
                     </ul>
                 </li>
                 <li>
@@ -30,7 +31,7 @@
                         <li><a href="">Видео</a></li>
                     </ul>
                 </li>
-                <li class="area"><a href="">Онлайн стрим</a></li>
+                <li class="area"><a>@Html.ActionLink("Онлайн стрим", "Stream")</a></li>
                 <li><a href="">Контакты</a></li>
             </ul>
         </nav>
