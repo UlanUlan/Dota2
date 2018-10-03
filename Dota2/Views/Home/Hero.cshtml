@@ -4,8 +4,8 @@
     var rand = new Random();
     var path = "/Images/HeroesIcons/" + @Html.Id() + ".gif";
     var heroName = @Html.Id();
-    heroName = (heroName.Substring(0, 1).ToUpper() + heroName.Remove(0, 1)).Replace('_',' ');
-    
+    heroName = (heroName.Substring(0, 1).ToUpper() + heroName.Remove(0, 1)).Replace('_', ' ');
+
 }
 
 @{
@@ -106,14 +106,17 @@
         </table>
     </div>
     <div class="heroImage">
-        @*<img src='https://dota2.ru/img/heroes/@Html.Id()/m_icon.jpg' class="heroImage">*@
-        <img src=@path ; class="heroImage"> 
+        <img src=@path ; class="heroImage">
+        @foreach (Dota2.Models.Hero item in Model.Where(m => m.Name == @Html.Id()))
+        {
+            <h5 > @item.Role</h5>
+        }
     </div>
     <div class="heroHistory">
         <h2>История</h2>
-        @foreach (Dota2.Models.Hero hero in Model.Where(m => m.Name == Html.Id()))
+        @foreach (Dota2.Models.Hero item in Model.Where(m => m.Name == Html.Id()))
         {
-            <p>@hero.History</p>
+            <p>@item.History</p>
         }
     </div>
 </div>

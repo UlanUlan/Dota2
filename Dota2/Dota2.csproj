@@ -319,6 +319,7 @@
     <Content Include="Views\Home\Heroes.cshtml" />
     <Content Include="Views\Home\Hero.cshtml" />
     <Content Include="Views\Home\Stream.cshtml" />
+    <Content Include="Views\Home\Contacts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\HeroGif\" />
