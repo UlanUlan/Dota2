@@ -31,7 +31,6 @@ namespace Dota2.Controllers
         }
         public ActionResult Heroes()
         {
-           
             return View();
         }
         

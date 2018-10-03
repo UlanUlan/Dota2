@@ -196,19 +196,24 @@ div div h5 {
 
 .powerHeroes {
     margin: 10px 10px 10px 10px;
+    height: 250px;
 }
 
 .agilityHeroes {
     margin: 10px 10px 10px 10px;
+    height: 250px;
 }
 
 .intelligenceHeroes {
     margin: 10px 10px 10px 10px;
+    height: 250px;
 }
 
 div div a img {
     width: 112px;
     height: 63px;
+    position: absolute;
+    margin-left: 60px;
 }
 
 div div a img {
