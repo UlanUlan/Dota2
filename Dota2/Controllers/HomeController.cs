@@ -33,10 +33,10 @@ namespace Dota2.Controllers
         {
             return View();
         }
-        
+
         public ActionResult Hero()
         {
-           
+
             return View(db.Heroes);
         }
 
@@ -45,7 +45,12 @@ namespace Dota2.Controllers
             return View();
         }
 
-       public ActionResult Contacts()
+        public ActionResult Contacts()
+        {
+            return View();
+        }
+
+        public ActionResult Gallery()
         {
             return View();
         }

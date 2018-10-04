@@ -1,0 +1,59 @@
+﻿@using System.Drawing;
+@using System.Drawing.Imaging;
+@{
+    string path = HttpContext.Current.Server.MapPath("~/Images/Gallery");
+
+    string[] imgsPaths = Directory.GetFiles(path);
+
+    List<string> imgs = new List<string>();
+
+    foreach (string item in imgsPaths)
+    {
+        string s = item.Split('\\').Last();
+        imgs.Add("/Images/Gallery/" + s);
+    }
+}
+
+@{
+    ViewBag.Title = "Gallery";
+}
+
+<script defer type="text/javascript" src="~/scripts/galleryScript.js"></script>
+
+<div class="heroes">
+    <h1>Галерея</h1>
+    <div class="columnOfGallery">
+        @foreach (string item in imgs)
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+    <div class="columnOfGallery">
+        @foreach (string item in imgs)
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+    <div class="columnOfGallery">
+        @foreach (string item in imgs)
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+
+    <div class="columnOfGallery">
+        @foreach (string item in imgs)
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+</div>
+

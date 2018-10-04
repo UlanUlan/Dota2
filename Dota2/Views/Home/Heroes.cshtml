@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Heroes";
 }
+<script defer type="text/javascript" src="~/scripts/heroGifScript.js"></script>
 
 <div class="heroes">
     <h1>Герои</h1>
@@ -11,107 +12,107 @@
     </div>
     <div class="powerHeroes power">
         <a href="@Url.Action("abaddon", "Home/Hero")">
-            <img onmouseover="func1('abaddon')" onmouseleave="func2('abaddon')" class="heroImg" id="abaddon" src="https://dota2.ru/img/heroes/abaddon/m_icon.jpg">
+            <img onmouseover="func1('abaddon')" onmouseleave="func2('abaddon')" class="heroImg heroIcons" id="abaddon" src="https://dota2.ru/img/heroes/abaddon/m_icon.jpg">
         </a>
         <a href="@Url.Action("alchemist", "Home/Hero")">
-            <img onmouseover="func1('alchemist')" onmouseleave="func2('alchemist')" class="heroImg" id="alchemist" src="https://dota2.ru/img/heroes/alchemist/m_icon.jpg">
+            <img onmouseover="func1('alchemist')" onmouseleave="func2('alchemist')" class="heroImg heroIcons" id="alchemist" src="https://dota2.ru/img/heroes/alchemist/m_icon.jpg">
         </a>
         <a href="@Url.Action("axe", "Home/Hero")">
-            <img onmouseover="func1('axe')" onmouseleave="func2('axe')" class="heroImg" id="axe" src="https://dota2.ru/img/heroes/axe/m_icon.jpg">
+            <img onmouseover="func1('axe')" onmouseleave="func2('axe')" class="heroImg heroIcons" id="axe" src="https://dota2.ru/img/heroes/axe/m_icon.jpg">
         </a>
         <a href="@Url.Action("beastmaster", "Home/Hero")">
-            <img onmouseover="func1('beastmaster')" onmouseleave="func2('beastmaster')" class="heroImg" id="beastmaster" src="https://dota2.ru/img/heroes/beastmaster/m_icon.jpg">
+            <img onmouseover="func1('beastmaster')" onmouseleave="func2('beastmaster')" class="heroImg heroIcons" id="beastmaster" src="https://dota2.ru/img/heroes/beastmaster/m_icon.jpg">
         </a>
         <a href="@Url.Action("bristleback", "Home/Hero")">
-            <img onmouseover="func1('bristleback')" onmouseleave="func2('bristleback')" class="heroImg" id="bristleback" src="https://dota2.ru/img/heroes/bristleback/m_icon.jpg">
+            <img onmouseover="func1('bristleback')" onmouseleave="func2('bristleback')" class="heroImg heroIcons" id="bristleback" src="https://dota2.ru/img/heroes/bristleback/m_icon.jpg">
         </a>
         <a href="@Url.Action("centaur_warrunner", "Home/Hero")">
-            <img onmouseover="func1('centaur_warrunner')" onmouseleave="func2('centaur_warrunner')" class="heroImg" id="centaur_warrunner" src="https://dota2.ru/img/heroes/centaur_warrunner/m_icon.jpg">
+            <img onmouseover="func1('centaur_warrunner')" onmouseleave="func2('centaur_warrunner')" class="heroImg heroIcons" id="centaur_warrunner" src="https://dota2.ru/img/heroes/centaur_warrunner/m_icon.jpg">
         </a>
         <a href="@Url.Action("chaos_knight", "Home/Hero")">
-            <img onmouseover="func1('chaos_knight')" onmouseleave="func2('chaos_knight')" class="heroImg" id="chaos_knight" src="https://dota2.ru/img/heroes/chaos_knight/m_icon.jpg">
+            <img onmouseover="func1('chaos_knight')" onmouseleave="func2('chaos_knight')" class="heroImg heroIcons" id="chaos_knight" src="https://dota2.ru/img/heroes/chaos_knight/m_icon.jpg">
         </a>
         <a href="@Url.Action("clockwerk", "Home/Hero")">
-            <img onmouseover="func1('clockwerk')" onmouseleave="func2('clockwerk')" class="heroImg" id="clockwerk" src="https://dota2.ru/img/heroes/clockwerk/m_icon.jpg">
+            <img onmouseover="func1('clockwerk')" onmouseleave="func2('clockwerk')" class="heroImg heroIcons" id="clockwerk" src="https://dota2.ru/img/heroes/clockwerk/m_icon.jpg">
         </a>
         <a href="@Url.Action("doom", "Home/Hero")">
-            <img onmouseover="func1('doom')" onmouseleave="func2('doom')" class="heroImg" id="doom" src="https://dota2.ru/img/heroes/doom/m_icon.jpg">
+            <img onmouseover="func1('doom')" onmouseleave="func2('doom')" class="heroImg heroIcons" id="doom" src="https://dota2.ru/img/heroes/doom/m_icon.jpg">
         </a>
         <a href="@Url.Action("earth_spirit", "Home/Hero")">
-            <img onmouseover="func1('earth_spirit')" onmouseleave="func2('earth_spirit')" class="heroImg" id="earth_spirit" src="https://dota2.ru/img/heroes/earth_spirit/m_icon.jpg">
+            <img onmouseover="func1('earth_spirit')" onmouseleave="func2('earth_spirit')" class="heroImg heroIcons" id="earth_spirit" src="https://dota2.ru/img/heroes/earth_spirit/m_icon.jpg">
         </a>
         <a href="@Url.Action("earthshaker", "Home/Hero")">
-            <img onmouseover="func1('earthshaker')" onmouseleave="func2('earthshaker')" class="heroImg" id="earthshaker" src="https://dota2.ru/img/heroes/earthshaker/m_icon.jpg">
+            <img onmouseover="func1('earthshaker')" onmouseleave="func2('earthshaker')" class="heroImg heroIcons" id="earthshaker" src="https://dota2.ru/img/heroes/earthshaker/m_icon.jpg">
         </a>
         <a href="@Url.Action("elder_titan", "Home/Hero")">
-            <img onmouseover="func1('elder_titan')" onmouseleave="func2('elder_titan')" class="heroImg" id="elder_titan" src="https://dota2.ru/img/heroes/elder_titan/m_icon.jpg">
+            <img onmouseover="func1('elder_titan')" onmouseleave="func2('elder_titan')" class="heroImg heroIcons" id="elder_titan" src="https://dota2.ru/img/heroes/elder_titan/m_icon.jpg">
         </a>
         <a href="@Url.Action("huskar", "Home/Hero")">
-            <img onmouseover="func1('huskar')" onmouseleave="func2('huskar')" class="heroImg" id="huskar" src="https://dota2.ru/img/heroes/huskar/m_icon.jpg">
+            <img onmouseover="func1('huskar')" onmouseleave="func2('huskar')" class="heroImg heroIcons" id="huskar" src="https://dota2.ru/img/heroes/huskar/m_icon.jpg">
         </a>
         <a href="@Url.Action("io", "Home/Hero")">
-            <img onmouseover="func1('io')" onmouseleave="func2('io')" class="heroImg" id="io" src="https://dota2.ru/img/heroes/io/m_icon.jpg">
+            <img onmouseover="func1('io')" onmouseleave="func2('io')" class="heroImg heroIcons" id="io" src="https://dota2.ru/img/heroes/io/m_icon.jpg">
         </a>
         <a href="@Url.Action("kunkka", "Home/Hero")">
-            <img onmouseover="func1('kunkka')" onmouseleave="func2('kunkka')" class="heroImg" id="kunkka" src="https://dota2.ru/img/heroes/kunkka/m_icon.jpg">
+            <img onmouseover="func1('kunkka')" onmouseleave="func2('kunkka')" class="heroImg heroIcons" id="kunkka" src="https://dota2.ru/img/heroes/kunkka/m_icon.jpg">
         </a>
         <a href="@Url.Action("legion_commander", "Home/Hero")">
-            <img onmouseover="func1('legion_commander')" onmouseleave="func2('legion_commander')" class="heroImg" id="legion_commander" src="https://dota2.ru/img/heroes/legion_commander/m_icon.jpg">
+            <img onmouseover="func1('legion_commander')" onmouseleave="func2('legion_commander')" class="heroImg heroIcons" id="legion_commander" src="https://dota2.ru/img/heroes/legion_commander/m_icon.jpg">
         </a>
         <a href="@Url.Action("lifestealer", "Home/Hero")">
-            <img onmouseover="func1('lifestealer')" onmouseleave="func2('lifestealer')" class="heroImg" id = "lifestealer" src="https://dota2.ru/img/heroes/lifestealer/m_icon.jpg">
+            <img onmouseover="func1('lifestealer')" onmouseleave="func2('lifestealer')" class="heroImg heroIcons" id="lifestealer" src="https://dota2.ru/img/heroes/lifestealer/m_icon.jpg">
         </a>
         <a href="@Url.Action("lycan", "Home/Hero")">
-            <img onmouseover="func1('lycan')" onmouseleave="func2('lycan')" class="heroImg" id="lycan" src="https://dota2.ru/img/heroes/lycan/m_icon.jpg">
+            <img onmouseover="func1('lycan')" onmouseleave="func2('lycan')" class="heroImg heroIcons" id="lycan" src="https://dota2.ru/img/heroes/lycan/m_icon.jpg">
         </a>
         <a href="@Url.Action("magnus", "Home/Hero")">
-            <img onmouseover="func1('magnus')" onmouseleave="func2('magnus')" class="heroImg" id="magnus" src="https://dota2.ru/img/heroes/magnus/m_icon.jpg">
+            <img onmouseover="func1('magnus')" onmouseleave="func2('magnus')" class="heroImg heroIcons" id="magnus" src="https://dota2.ru/img/heroes/magnus/m_icon.jpg">
         </a>
         <a href="@Url.Action("night_stalker", "Home/Hero")">
-            <img onmouseover="func1('night_stalker')" onmouseleave="func2('night_stalker')" class="heroImg" id="night_stalker" src="https://dota2.ru/img/heroes/night_stalker/m_icon.jpg">
+            <img onmouseover="func1('night_stalker')" onmouseleave="func2('night_stalker')" class="heroImg heroIcons" id="night_stalker" src="https://dota2.ru/img/heroes/night_stalker/m_icon.jpg">
         </a>
         <a href="@Url.Action("omniknight", "Home/Hero")">
-            <img onmouseover="func1('omniknight')" onmouseleave="func2('omniknight')" class="heroImg" id="omniknight" src="https://dota2.ru/img/heroes/omniknight/m_icon.jpg">
+            <img onmouseover="func1('omniknight')" onmouseleave="func2('omniknight')" class="heroImg heroIcons" id="omniknight" src="https://dota2.ru/img/heroes/omniknight/m_icon.jpg">
         </a>
         <a href="@Url.Action("phoenix", "Home/Hero")">
-            <img onmouseover="func1('phoenix')" onmouseleave="func2('phoenix')" class="heroImg" id="phoenix" src="https://dota2.ru/img/heroes/phoenix/m_icon.jpg">
+            <img onmouseover="func1('phoenix')" onmouseleave="func2('phoenix')" class="heroImg heroIcons" id="phoenix" src="https://dota2.ru/img/heroes/phoenix/m_icon.jpg">
         </a>
         <a href="@Url.Action("pudge", "Home/Hero")">
-            <img onmouseover="func1('pudge')" onmouseleave="func2('pudge')" class="heroImg" id="pudge" src="https://dota2.ru/img/heroes/pudge/m_icon.jpg">
+            <img onmouseover="func1('pudge')" onmouseleave="func2('pudge')" class="heroImg heroIcons" id="pudge" src="https://dota2.ru/img/heroes/pudge/m_icon.jpg">
         </a>
         <a href="@Url.Action("sand_king", "Home/Hero")">
-            <img onmouseover="func1('sand_king')" onmouseleave="func2('sand_king')" class="heroImg" id="sand_king" src="https://dota2.ru/img/heroes/sand_king/m_icon.jpg">
+            <img onmouseover="func1('sand_king')" onmouseleave="func2('sand_king')" class="heroImg heroIcons" id="sand_king" src="https://dota2.ru/img/heroes/sand_king/m_icon.jpg">
         </a>
         <a href="@Url.Action("slardar", "Home/Hero")">
-            <img onmouseover="func1('slardar')" onmouseleave="func2('slardar')" class="heroImg" id="slardar" src="https://dota2.ru/img/heroes/slardar/m_icon.jpg">
+            <img onmouseover="func1('slardar')" onmouseleave="func2('slardar')" class="heroImg heroIcons" id="slardar" src="https://dota2.ru/img/heroes/slardar/m_icon.jpg">
         </a>
         <a href="@Url.Action("spirit_breaker", "Home/Hero")">
-            <img onmouseover="func1('spirit_breaker')" onmouseleave="func2('spirit_breaker')" class="heroImg" id="spirit_breaker" src="https://dota2.ru/img/heroes/spirit_breaker/m_icon.jpg">
+            <img onmouseover="func1('spirit_breaker')" onmouseleave="func2('spirit_breaker')" class="heroImg heroIcons" id="spirit_breaker" src="https://dota2.ru/img/heroes/spirit_breaker/m_icon.jpg">
         </a>
         <a href="@Url.Action("sven", "Home/Hero")">
-            <img onmouseover="func1('sven')" onmouseleave="func2('sven')" class="heroImg" id="sven" src="https://dota2.ru/img/heroes/sven/m_icon.jpg">
+            <img onmouseover="func1('sven')" onmouseleave="func2('sven')" class="heroImg heroIcons" id="sven" src="https://dota2.ru/img/heroes/sven/m_icon.jpg">
         </a>
         <a href="@Url.Action("tidehunter", "Home/Hero")">
-            <img onmouseover="func1('tidehunter')" onmouseleave="func2('tidehunter')" class="heroImg" id="tidehunter" src="https://dota2.ru/img/heroes/tidehunter/m_icon.jpg">
+            <img onmouseover="func1('tidehunter')" onmouseleave="func2('tidehunter')" class="heroImg heroIcons" id="tidehunter" src="https://dota2.ru/img/heroes/tidehunter/m_icon.jpg">
         </a>
         <a href="@Url.Action("timbersaw", "Home/Hero")">
-            <img onmouseover="func1('timbersaw')" onmouseleave="func2('timbersaw')" class="heroImg" id="timbersaw" src="https://dota2.ru/img/heroes/timbersaw/m_icon.jpg">
+            <img onmouseover="func1('timbersaw')" onmouseleave="func2('timbersaw')" class="heroImg heroIcons" id="timbersaw" src="https://dota2.ru/img/heroes/timbersaw/m_icon.jpg">
         </a>
         <a href="@Url.Action("tiny", "Home/Hero")">
-            <img onmouseover="func1('tiny')" onmouseleave="func2('tiny')" class="heroImg" id="tiny" src="https://dota2.ru/img/heroes/tiny/m_icon.jpg">
+            <img onmouseover="func1('tiny')" onmouseleave="func2('tiny')" class="heroImg heroIcons" id="tiny" src="https://dota2.ru/img/heroes/tiny/m_icon.jpg">
         </a>
         <a href="@Url.Action("treant_protector", "Home/Hero")">
-            <img onmouseover="func1('treant_protector')" onmouseleave="func2('treant_protector')" class="heroImg" id="treant_protector" src="https://dota2.ru/img/heroes/treant_protector/m_icon.jpg">
+            <img onmouseover="func1('treant_protector')" onmouseleave="func2('treant_protector')" class="heroImg heroIcons" id="treant_protector" src="https://dota2.ru/img/heroes/treant_protector/m_icon.jpg">
         </a>
         <a href="@Url.Action("tusk", "Home/Hero")">
-            <img onmouseover="func1('tusk')" onmouseleave="func2('tusk')" class="heroImg" id="tusk" src="https://dota2.ru/img/heroes/tusk/m_icon.jpg">
+            <img onmouseover="func1('tusk')" onmouseleave="func2('tusk')" class="heroImg heroIcons" id="tusk" src="https://dota2.ru/img/heroes/tusk/m_icon.jpg">
         </a>
-        
+
         <a href="@Url.Action("undying", "Home/Hero")">
-            <img onmouseover="func1('undying')" onmouseleave="func2('undying')" class="heroImg" id="undying" src="https://dota2.ru/img/heroes/undying/m_icon.jpg">
+            <img onmouseover="func1('undying')" onmouseleave="func2('undying')" class="heroImg heroIcons" id="undying" src="https://dota2.ru/img/heroes/undying/m_icon.jpg">
         </a>
         <a href="@Url.Action("wraith_king", "Home/Hero")">
-            <img onmouseover="func1('wraith_king')" onmouseleave="func2('wraith_king')" class="heroImg" id="wraith_king" src="https://dota2.ru/img/heroes/wraith_king/m_icon.jpg">
+            <img onmouseover="func1('wraith_king')" onmouseleave="func2('wraith_king')" class="heroImg heroIcons" id="wraith_king" src="https://dota2.ru/img/heroes/wraith_king/m_icon.jpg">
         </a>
     </div>
     <div class="power">
@@ -234,31 +235,31 @@
             <img onmouseover="func1('ancient_apparition')" onmouseleave="func2('ancient_apparition')" id="ancient_apparition" class="heroIntelligence" src="https://dota2.ru/img/heroes/ancient_apparition/m_icon.jpg">
         </a>
         <a href="@Url.Action("bane", "Home/Hero")">
-            <img onmouseover="func1('bane')" onmouseleave="func2('bane')" id="bane"  class="heroIntelligence" src="https://dota2.ru/img/heroes/bane/m_icon.jpg">
+            <img onmouseover="func1('bane')" onmouseleave="func2('bane')" id="bane" class="heroIntelligence" src="https://dota2.ru/img/heroes/bane/m_icon.jpg">
         </a>
         <a href="@Url.Action("batrider", "Home/Hero")">
-            <img onmouseover="func1('batrider')" onmouseleave="func2('batrider')" id="batrider"  class="heroIntelligence" src="https://dota2.ru/img/heroes/batrider/m_icon.jpg">
+            <img onmouseover="func1('batrider')" onmouseleave="func2('batrider')" id="batrider" class="heroIntelligence" src="https://dota2.ru/img/heroes/batrider/m_icon.jpg">
         </a>
         <a href="@Url.Action("chen", "Home/Hero")">
-            <img onmouseover="func1('chen')" onmouseleave="func2('chen')" id="chen"  class="heroIntelligence" src="https://dota2.ru/img/heroes/chen/m_icon.jpg">
+            <img onmouseover="func1('chen')" onmouseleave="func2('chen')" id="chen" class="heroIntelligence" src="https://dota2.ru/img/heroes/chen/m_icon.jpg">
         </a>
         <a href="@Url.Action("crystal_maiden", "Home/Hero")">
-            <img onmouseover="func1('crystal_maiden')" onmouseleave="func2('crystal_maiden')" id="crystal_maiden"  class="heroIntelligence" src="https://dota2.ru/img/heroes/crystal_maiden/m_icon.jpg">
+            <img onmouseover="func1('crystal_maiden')" onmouseleave="func2('crystal_maiden')" id="crystal_maiden" class="heroIntelligence" src="https://dota2.ru/img/heroes/crystal_maiden/m_icon.jpg">
         </a>
         <a href="@Url.Action("dark_seer", "Home/Hero")">
             <img onmouseover="func1('dark_seer')" onmouseleave="func2('dark_seer')" id="dark_seer" class="heroIntelligence" src="https://dota2.ru/img/heroes/dark_seer/m_icon.jpg">
         </a>
         <a href="@Url.Action("dazzle", "Home/Hero")">
-            <img onmouseover="func1('dazzle')" onmouseleave="func2('dazzle')" id="dazzle"  class="heroIntelligence" src="https://dota2.ru/img/heroes/dazzle/m_icon.jpg">
+            <img onmouseover="func1('dazzle')" onmouseleave="func2('dazzle')" id="dazzle" class="heroIntelligence" src="https://dota2.ru/img/heroes/dazzle/m_icon.jpg">
         </a>
         <a href="@Url.Action("death_prophet", "Home/Hero")">
-            <img onmouseover="func1('death_prophet')" onmouseleave="func2('death_prophet')" id="death_prophet"  class="heroIntelligence" src="https://dota2.ru/img/heroes/death_prophet/m_icon.jpg">
+            <img onmouseover="func1('death_prophet')" onmouseleave="func2('death_prophet')" id="death_prophet" class="heroIntelligence" src="https://dota2.ru/img/heroes/death_prophet/m_icon.jpg">
         </a>
         <a href="@Url.Action("disruptor", "Home/Hero")">
-            <img onmouseover="func1('disruptor')" onmouseleave="func2('disruptor')" id="disruptor"  class="heroIntelligence" src="https://dota2.ru/img/heroes/disruptor/m_icon.jpg">
+            <img onmouseover="func1('disruptor')" onmouseleave="func2('disruptor')" id="disruptor" class="heroIntelligence" src="https://dota2.ru/img/heroes/disruptor/m_icon.jpg">
         </a>
         <a href="@Url.Action("enchantress", "Home/Hero")">
-            <img onmouseover="func1('enchantress')" onmouseleave="func2('enchantress')" id="enchantress"  class="heroIntelligence" src="https://dota2.ru/img/heroes/enchantress/m_icon.jpg">
+            <img onmouseover="func1('enchantress')" onmouseleave="func2('enchantress')" id="enchantress" class="heroIntelligence" src="https://dota2.ru/img/heroes/enchantress/m_icon.jpg">
         </a>
         <a href="@Url.Action("enigma", "Home/Hero")">
             <img onmouseover="func1('enigma')" onmouseleave="func2('enigma')" id="enigma" class="heroIntelligence" src="https://dota2.ru/img/heroes/enigma/m_icon.jpg">

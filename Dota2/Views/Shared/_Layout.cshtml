@@ -8,7 +8,6 @@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script defer type="text/javascript" src="~/scripts/heroGifScript.js"></script> 
 </head>
 <body>
     <header>
@@ -24,7 +23,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="">Галерея</a>
+                    <a href="">@Html.ActionLink("Галерея", "Gallery")</a>
                     <ul>
                         <li><a href="">Рандомная картинка</a></li>
                         <li><a href="">Картинки</a></li>

@@ -172,6 +172,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Gallery\1.png" />
+    <Content Include="Images\Gallery\67e188b8e4cd5f80319a1db3878b9ea3.jpg" />
+    <Content Include="Images\Gallery\fio4NNX.jpg" />
+    <Content Include="Images\Gallery\juggernaut-dota-2-8d.jpg" />
+    <Content Include="Images\Gallery\phantom-assassin-2.jpg" />
+    <Content Include="Images\Gallery\rubicks_cube_dota_2_art_95292_300x168.jpg" />
+    <Content Include="Images\Gallery\troll_warlord_dota_2_hd_wallpaper_by_masdhika-d6utijs.jpg" />
     <Content Include="Images\HeroesIcons\abaddon.gif" />
     <Content Include="Images\HeroesIcons\alchemist.gif" />
     <Content Include="Images\HeroesIcons\ancient_apparition.gif" />
@@ -289,6 +296,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\galleryScript.js" />
     <Content Include="Scripts\heroGifScript.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -320,10 +328,9 @@
     <Content Include="Views\Home\Hero.cshtml" />
     <Content Include="Views\Home\Stream.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\HeroGif\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
