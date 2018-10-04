@@ -84,20 +84,20 @@ for (var i = 0; i < iconsIntelligence.length; i++) {
 //}
 
 
-function rezak() {
-    var imgs = document.getElementsByClassName("itemOfGallery");
-    for (var i = 0; i < imgs.length; i++) {
-        var img = document.getElementById(imgs[i].id);
-        if (img.clientHeight > img.clientWidth) {
-            img.clientHeight = 350 + "px";
-            img.clientWidth = 200 + "px";
-        }
-        else {
-            img1.clientHeight = 180 + "px";
-            img1.clientWidth = 230 + "px";
-        }
-    }
-}
+//function rezak() {
+//    var imgs = document.getElementsByClassName("itemOfGallery");
+//    for (var i = 0; i < imgs.length; i++) {
+//        var img = document.getElementById(imgs[i].id);
+//        if (img.clientHeight > img.clientWidth) {
+//            img.clientHeight = 350 + "px";
+//            img.clientWidth = 200 + "px";
+//        }
+//        else {
+//            img1.clientHeight = 180 + "px";
+//            img1.clientWidth = 230 + "px";
+//        }
+//    }
+//}
 
 function func1(hero) {
     var s = "#" + hero;

@@ -19,11 +19,99 @@
 }
 
 <script defer type="text/javascript" src="~/scripts/galleryScript.js"></script>
+@{
+    //for (int i = imgs.Count - 1; i >= 0; i--)
+    //{
+    //    int j = random.Next(i + 1);
+    //    // обменять значения data[j] и data[i]
+    //    var temp = data[j];
+    //    data[j] = data[i];
+    //    data[i] = temp;
+    //}
+
+    int z = imgs.Count / 7;
+
+    List<List<string>> imgss = new List<List<string>>();
+
+    List<string> temp = new List<string>();
+
+    int i = 0;
+
+    for (;i <= z;)
+    {
+        temp.Add(imgs[i]);
+        i++;
+        if (i == z)
+        {
+            imgss.Add(temp);
+            temp = null;
+            for (; i <= z * 2;)
+            {
+                temp.Add(imgs[i]);
+                i++;
+                if (i == z)
+                {
+                    imgss.Add(temp);
+                    temp = null;
+                    for (; i <= z * 3;)
+                    {
+                        temp.Add(imgs[i]);
+                        i++;
+                        if (i == z)
+                        {
+                            imgss.Add(temp);
+                            temp = null;
+                            for (; i <= z * 4;)
+                            {
+                                temp.Add(imgs[i]);
+                                i++;
+                                if (i == z)
+                                {
+                                    imgss.Add(temp);
+                                    temp = null;
+                                    for (; i <= z * 5;)
+                                    {
+                                        temp.Add(imgs[i]);
+                                        i++;
+                                        if (i == z)
+                                        {
+                                            imgss.Add(temp);
+                                            temp = null;
+                                            for (; i <= z * 6;)
+                                            {
+                                                temp.Add(imgs[i]);
+                                                i++;
+                                                if (i == z)
+                                                {
+                                                    imgss.Add(temp);
+                                                    temp = null;
+                                                    for (; i <= imgs.Count;)
+                                                    {
+                                                        temp.Add(imgs[i]);
+                                                        i++;
+                                                        if (i == z)
+                                                        {
+                                                            imgss.Add(temp);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 <div class="heroes">
     <h1>Галерея</h1>
     <div class="columnOfGallery">
-        @foreach (string item in imgs)
+        @foreach (string item in imgss[0])
         {
             <a href="">
                 <img class="itemOfGallery" src=@item>
@@ -31,7 +119,7 @@
         }
     </div>
     <div class="columnOfGallery">
-        @foreach (string item in imgs)
+        @foreach (string item in imgss[1])
         {
             <a href="">
                 <img class="itemOfGallery" src=@item>
@@ -39,7 +127,16 @@
         }
     </div>
     <div class="columnOfGallery">
-        @foreach (string item in imgs)
+        @foreach (string item in imgss[2])
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+
+     <div class="columnOfGallery">
+        @foreach (string item in imgss[3])
         {
             <a href="">
                 <img class="itemOfGallery" src=@item>
@@ -48,7 +145,25 @@
     </div>
 
     <div class="columnOfGallery">
-        @foreach (string item in imgs)
+        @foreach (string item in imgss[4])
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+
+    <div class="columnOfGallery">
+        @foreach (string item in imgss[5])
+        {
+            <a href="">
+                <img class="itemOfGallery" src=@item>
+            </a>
+        }
+    </div>
+
+    <div class="columnOfGallery">
+        @foreach (string item in imgss[6])
         {
             <a href="">
                 <img class="itemOfGallery" src=@item>
