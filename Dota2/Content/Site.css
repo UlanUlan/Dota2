@@ -25,7 +25,27 @@ textarea {
 
 body {
     background: #0B0B0D;
+    height: 100%;
 }
+
+/*#divkaImage {
+    background-color: #ffffff;
+    height: 500px;
+    width: 200px;
+}*/
+
+#imageFull {
+    width: 500px;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+#imageFullDiv {
+    margin-left:40%;
+}
+
+
 
 ul {
     display: flex; /* для горизонтального меню*/
@@ -107,15 +127,17 @@ header nav {
         position: relative;
     }
 
-footer {
+/*footer {
     position: absolute;
-    bottom: 10px;
+    left: 0;
+    bottom: 0;
     width: 100%;
+    height: 200px;
 }
 
 #footer {
     text-align: center;
-}
+}*/
 
 .area {
     /*text-align: center;*/
@@ -151,17 +173,18 @@ footer {
     }
 }
 
+/*#backimageFull {
+    background: #131213;
+    text-align: center;
+}*/
+
 .heroes {
-    background: #B5ABBE;
+    background: #131213;
     margin: 0 20px 0 20px;
 }
 
-/*div{
-  display: block;
-}*/
-
 div h1 {
-    background-color: #2b2c32;
+    background-color: #222328;
     text-align: center;
     color: #a8a8aa;
     line-height: 51px;
@@ -214,6 +237,9 @@ div div h5 {
     height: 63px;
     position: absolute;
     margin-left: 60px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }
 
 .heroIcons {
@@ -300,6 +326,8 @@ div div h5 {
     text-align: center;
     font-size: 20px;
     color: #a8a8aa;
+    margin-top: 373px;
+    margin-left: 5px;
 }
 
 .columnOfGallery {
@@ -309,6 +337,197 @@ div div h5 {
     margin: 0.5%;
 }
 
-.itemOfGallery{
-    margin: 5px;
+@-webkit-keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    75% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
 }
+
+@keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    75% {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+.itemOfGallery {
+    margin: 5px;
+    width: 100%;
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+    .itemOfGallery:hover {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+#contacts {
+    /*margin-top:20px;*/
+    color: #a8a8aa;
+    font-size: 15px;
+    line-height: 5px;
+}
+
+.IndexDiv {
+    height: 100%;
+    width: 32%;
+    float: left;
+    margin: 0.5%;
+}
+
+#IndexDivMatches {
+    margin-top: 60px;
+    border-radius: 5px;
+    height: 435px;
+    width: 100%;
+    background-color: #2b2c32;
+    /*text-align: center;*/
+    color: #a8a8aa;
+}
+
+#InnerIndexDivMatches {
+    height: 100%;
+    width: 100%;
+    background-color: #131213;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#IndexDivStream {
+    border-radius: 5px;
+    height: 700px;
+    width: 100%;
+    background-color: #2b2c32;
+    text-align: center;
+    color: #a8a8aa;
+}
+
+#innerIndexDivStream {
+    height: 100%;
+    width: 100%;
+    background-color: #131213;
+}
+
+.indexHeroIcons {
+    width: 32%;
+    height: 190px;
+    margin: 5px 0px 10px 0px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black /*var(--rColor)*/;
+    /*position: absolute;*/
+    /*margin-left: 60px;*/
+}
+
+#IndexDivGallery {
+    border-radius: 5px;
+    height: 400px;
+    width: 100%;
+    background-color: #2b2c32;
+    text-align: center;
+    color: #a8a8aa;
+}
+
+#InnerIndexDivGallery {
+    height: 100%;
+    width: 100%;
+    background-color: #131213;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#IndexDivContacts {
+    border-radius: 5px;
+    margin-top: 60px;
+    height: 205px;
+    width: 100%;
+    background-color: #2b2c32;
+    text-align: center;
+    color: #a8a8aa;
+}
+
+#InnerIndexDivContacts {
+    height: 100%;
+    width: 100%;
+    background-color: #131213;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+}
+
+#IndexDivHeroes {
+    border-radius: 5px;
+    height: 205px;
+    width: 100%;
+    background-color: #2b2c32;
+    text-align: center;
+    color: #a8a8aa;
+}
+
+#InnerIndexDivHeroes {
+    height: 100%;
+    width: 100%;
+    background-color: #131213;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+}
+
+
+/*#iframeGallery {
+    height: 100%;
+    width: 100%;
+    margin:1%;
+}*/
+
+/*#matchesImgLeft {
+    float: left;
+    width: 20%;
+    height: 36px;
+}*/
+
+#team1 {
+    text-align: center;
+    height: 36px;
+    margin: 0px 0px 0px;
+}
+
+#time {
+    text-align: center;
+    height: 36px;
+    margin: 0px 0px 0px;
+}
+
+#team2 {
+    text-align: center;
+    height: 36px;
+    margin: 0px 0px 0px;
+}
+
+.InnerIndexDivMatchesColumn {
+    width: 20%;
+    float: left;
+    background-color: #131213;
+}
+

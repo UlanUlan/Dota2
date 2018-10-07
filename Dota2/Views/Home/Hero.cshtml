@@ -109,7 +109,7 @@
         <img src=@path ; class="heroImage">
         @foreach (Dota2.Models.Hero item in Model.Where(m => m.Name == @Html.Id()))
         {
-            <h5 > @item.Role</h5>
+            <h5> @item.Role</h5>
         }
     </div>
     <div class="heroHistory">
@@ -120,3 +120,7 @@
         }
     </div>
 </div>
+
+@*<footer>
+    <p id="footer">© 2018 Все права защищены</p>
+</footer>*@

@@ -1,3 +1,242 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using System.Drawing;
+@using System.Drawing.Imaging;
+@using System.Security.Cryptography;
+@{
+    /**/
+
+    // Generator.getResponse();
+
+    Generator.TakeItEasy();
+
+    string path = HttpContext.Current.Server.MapPath("~/Images/Gallery");
+
+    string[] imgsPaths = Directory.GetFiles(path);
+
+
+
+    List<string> imgs = new List<string>();
+    List<string> imgsName = new List<string>();
+
+
+
+    foreach (string item in imgsPaths)
+    {
+        string s = item.Split('\\').Last();
+        string d = s.Split('.')[0];
+        imgsName.Add(d);
+        imgs.Add("/Images/Gallery/" + s);
+    }
+
+    Generator.Shuffle(imgs, imgsName);
+    //Generator.Shuffle(imgsName);
+
+    int i = 0;
+    int z = imgs.Count / 7;
+
+    string[] heroes = Directory.GetFiles(Generator.pathToHeroesIconsGif);
+
+    List<string> heroesIconPaths = new List<string>();
+    List<string> srcPaths = new List<string>();
+
+
+    foreach (string item in heroes)
+    {
+        //@"C:\Users\Adminushka\source\repos\Dota2\Dota2\Images\Gallery\"
+        string s = item.Split('\\').Last().Split('.')[0];
+        heroesIconPaths.Add(s);
+    }
+
+    heroesIconPaths = Generator.GetThreeRandom(heroesIconPaths);
+
+    foreach (string item in heroesIconPaths)
+    {
+        srcPaths.Add("/Images/HeroesIcons/" + item + ".gif");
+    }
+
 }
+
+@{
+    ViewBag.Title = "Home page";
+}
+
+<script defer type="text/javascript" src="~/scripts/indexScript.js"></script>
+
+<div class="heroes">
+    <h1>Главная страница</h1>
+    <div class="IndexDiv">
+        <div id="IndexDivHeroes">
+            <h3>@Html.ActionLink("Герои", "Heroes")</h3>
+            <div id="InnerIndexDivHeroes">
+                @for (int j = 0; j < 3; j++)
+                {
+                    <a href="@Url.Action(heroesIconPaths[j], "Home/Hero")">
+                        <img class="indexHeroIcons" id=@heroesIconPaths[j] src=@srcPaths[j]>
+                    </a>
+                }
+            </div>
+        </div>
+        <div id="IndexDivMatches">
+            <h3 style="text-align:center">Матчи</h3>
+            <div class="InnerIndexDivMatches">
+                <div class="InnerIndexDivMatchesColumn">
+                    <p id="team1">Team1</p>
+                    <p id="team1">Team1</p>
+                    <p id="team1">Team1</p>
+                    <p id="team1">Team1</p>
+                    <p id="team1">Team1</p>
+                </div>
+                <div class='InnerIndexDivMatchesColumn style="background-color:black"'>
+                    <img height="36" src="https://dota2.ru/img/esport/no-team-logo.png" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/no-team-logo.png" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/no-team-logo.png" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/no-team-logo.png" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/no-team-logo.png" style="display:block; margin:auto" />
+                </div>
+                <div class="InnerIndexDivMatchesColumn">
+                    <p id="time">23:00</p>
+                    <p id="time">23:00</p>
+                    <p id="time">23:00</p>
+                    <p id="time">23:00</p>
+                    <p id="time">23:00</p>
+                </div>
+                <div class='InnerIndexDivMatchesColumn style="background-color:black"'>
+                    <img height="36" src="https://dota2.ru/img/esport/team/911.png?1536998120" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/team/911.png?1536998120" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/team/911.png?1536998120" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/team/911.png?1536998120" style="display:block; margin:auto" />
+                    <img height="36" src="https://dota2.ru/img/esport/team/911.png?1536998120" style="display:block; margin:auto" />
+                </div>
+                <div class="InnerIndexDivMatchesColumn">
+                    <p id="team2">Team2</p>
+                    <p id="team2">Team2</p>
+                    <p id="team2">Team2</p>
+                    <p id="team2">Team2</p>
+                    <p id="team2">Team2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="IndexDiv">
+        <div id="IndexDivStream">
+            <h3>@Html.ActionLink("Онлайн стрим", "Stream")</h3>
+            <div id="InnerIndexDivStream">
+                <div class="stream">
+                    <iframe src="https://player.twitch.tv/?channel=xgargonitx"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src="https://player.twitch.tv/?channel=a1taoda"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src="https://imasdk.googleapis.com/js/core/bridge3.239.1_en.html#goog_95863395"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src="https://player.twitch.tv/?channel=xgargonitx"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src="https://player.twitch.tv/?channel=deco1tv"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src="https://player.twitch.tv/?channel=staffordztv"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src=" https://player.twitch.tv/?channel=weplay_main"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src=" https://player.twitch.tv/?channel=weplay_main"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src=" https://player.twitch.tv/?channel=weplay_main"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src=" https://player.twitch.tv/?channel=weplay_main"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src=" https://player.twitch.tv/?channel=weplay_main"></iframe>
+                </div>
+                <div class="stream">
+                    <iframe src=" https://player.twitch.tv/?channel=weplay_main"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="IndexDiv">
+        <div id="IndexDivGallery">
+            <h3>@Html.ActionLink("Галерея", "Gallery")</h3>
+            <div id="InnerIndexDivGallery">
+                <div class="columnOfGallery">
+                    @for (; i < z; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i] id="img">
+                        </a>
+                    }
+                </div>
+                <div class="columnOfGallery">
+                    @for (; i < z * 2; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i]>
+                        </a>
+                    }
+                </div>
+                <div class="columnOfGallery">
+                    @for (; i < z * 3; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i]>
+                        </a>
+                    }
+                </div>
+
+                <div class="columnOfGallery">
+                    @for (; i < z * 4; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i]>
+                        </a>
+                    }
+                </div>
+
+                <div class="columnOfGallery">
+                    @for (; i < z * 5; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i]>
+                        </a>
+                    }
+                </div>
+
+                <div class="columnOfGallery">
+                    @for (; i < z * 6; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i]>
+                        </a>
+                    }
+                </div>
+
+                <div class="columnOfGallery">
+                    @for (; i < z * 7; i++)
+                    {
+                        <a href="@Url.Action(imgsName[i], "Home/Image")">
+                            <img class="itemOfGallery" src=@imgs[i]>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+        <div id="IndexDivContacts">
+            <h3>@Html.ActionLink("Контакты", "Contacts")</h3>
+            <div id="InnerIndexDivContacts">
+                <br />
+                <p id="contacts">Front-end: Ulan</p><br />
+                <p id="contacts">Back-end: Ulan</p><br />
+                <p id="contacts">По вопросам рекламы: real_user@list.ru</p><br />
+                <p id="contacts">По вопросам работы сайта: real_user@list.ru</p><br />
+                <p id="contacts">Есть вопрос? -> @Html.ActionLink("Задать вопрос", "Feedback")</p>
+            </div>
+        </div>
+    </div>
+</div>

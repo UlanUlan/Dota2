@@ -50,7 +50,17 @@ namespace Dota2.Controllers
             return View();
         }
 
+        public ActionResult Feedback()
+        {
+            return View();
+        }
+
         public ActionResult Gallery()
+        {
+            return View();
+        }
+
+        public ActionResult Image()
         {
             return View();
         }

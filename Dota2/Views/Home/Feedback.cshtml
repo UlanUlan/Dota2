@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Feedback";
+}
+
+<script defer type="text/javascript" src="~/scripts/feedbackScript.js"></script>
+
+<div>
+    <h1>Обратная связь</h1>
+    <input id="sender" placeholder="Введите адрес эл почты" type="text" size="30"><br /><br />
+    <textarea id="text" placeholder="Введите текст вопроса" name="comment" cols="60" rows="10"></textarea><br /><br />
+    <input type="submit" value="Отправить" onclick="SendToMail">
+</div>
+
+

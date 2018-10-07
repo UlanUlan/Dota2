@@ -1,0 +1,40 @@
+﻿@{
+    string jpg = Generator.pathToGallery + Html.Id() + ".jpg";
+    string png = Generator.pathToGallery + Html.Id() + ".png";
+    string gif = Generator.pathToGallery + Html.Id() + ".gif";
+    string path = "/Images/Gallery/";
+    if (!System.IO.File.Exists(jpg) && !System.IO.File.Exists(png))
+    {
+        path += Html.Id() + "." + gif.Split('.').Last();
+    }
+    else if (!System.IO.File.Exists(jpg) && !System.IO.File.Exists(gif))
+    {
+        path += Html.Id() + "." + png.Split('.').Last();
+    }
+    else
+    {
+        path += Html.Id() + "." + jpg.Split('.').Last();
+    }
+    //#222328
+}
+
+@{
+    ViewBag.Title = "Image";
+}
+
+
+<script defer type="text/javascript" src="~/scripts/imageScript.js"></script>
+
+@*<div id="imageFullDiv">
+    <a>@Html.ActionLink("В галерею", "Gallery")</a>
+    <a href="" onclick="save()">Сохранить</a>
+</div>*@
+<div style="margin-top:10px">
+    <h3 style="margin:0% 30.5%">
+        <a style="float: left">@Html.ActionLink("В галерею", "Gallery")</a>
+        <a style="float: right" href="" onclick="save()">Сохранить</a>
+    </h3>
+    <img src=@path id="imageFull" />
+</div>
+
+

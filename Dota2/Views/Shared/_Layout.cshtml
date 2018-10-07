@@ -13,7 +13,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="@Url.Action("Дота2", "Home/Index")"><img src='@Url.Content("https://dota2.ru/img/dota2.png")'/></a></li>
+                <li><a href="@Url.Action("Index")"><img src='@Url.Content("https://dota2.ru/img/dota2.png")'/></a></li>
                 <li>
                     <a href="">Описание</a>
                     <ul>
@@ -34,7 +34,7 @@
                 <li>
                     <a>@Html.ActionLink("Контакты", "Contacts")</a>
                     <ul>
-                        <li><a href="">Обратная связь</a></li>
+                        <li><a href="">@Html.ActionLink("Обратная связь", "Feedback")</a></li>
                     </ul>
                 </li>
             </ul>
@@ -43,9 +43,7 @@
 
     @RenderBody()
 
-    <footer>
-        <p id="footer">© 2018 Все права защищены</p>
-    </footer>
+    
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
