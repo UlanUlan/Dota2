@@ -16,33 +16,33 @@ namespace Dota2
         public static string pathToHeroesIconsGif = @"C:\Users\Adminushka\source\repos\Dota2\Dota2\Images\HeroesIcons\";
 
 
-        [WebMethod()]
-        [System.Web.Script.Services.ScriptMethod()]
-        public static bool SendToMail(string sender, string text)
-        {
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("spider-man-shag@mail.ru"); // Адрес отправителя
-            mail.To.Add(new MailAddress("real_user@list.ru")); // Адрес получателя
-            mail.Subject = "Вопрос с сайта";
-            mail.Body = text;
-            mail.Attachments.Add(new Attachment("real_user@list.ru"));
+        //[WebMethod()]
+        //[System.Web.Script.Services.ScriptMethod()]
+        //public static bool SendToMail(string sender, string text)
+        //{
+        //    MailMessage mail = new MailMessage();
+        //    mail.From = new MailAddress("spider-man-shag@mail.ru"); // Адрес отправителя
+        //    mail.To.Add(new MailAddress("real_user@list.ru")); // Адрес получателя
+        //    mail.Subject = "Вопрос с сайта";
+        //    mail.Body = text;
+        //    mail.Attachments.Add(new Attachment("real_user@list.ru"));
 
-            SmtpClient client = new SmtpClient();
-            client.Host = "smtp.mail.ru";
-            client.Port = 587; // Обратите внимание что порт 587
-            client.EnableSsl = true;
-            client.Credentials = new NetworkCredential("spider-man-shag@mail.ru", "Qwerty123#"); // Ваши логин и пароль
+        //    SmtpClient client = new SmtpClient();
+        //    client.Host = "smtp.mail.ru";
+        //    client.Port = 587; // Обратите внимание что порт 587
+        //    client.EnableSsl = true;
+        //    client.Credentials = new NetworkCredential("spider-man-shag@mail.ru", "Qwerty123#"); // Ваши логин и пароль
 
-            try
-            {
-                client.Send(mail);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
+        //    try
+        //    {
+        //        client.Send(mail);
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return false;
+        //    }
+        //}
 
         public static void getResponse()
         {
@@ -63,8 +63,45 @@ namespace Dota2
             }
             while (count > 0);
             StreamWriter file = new StreamWriter(@"C:\\sql\parse.txt");
-            file.Write(sb.ToString());
-            file.Close();
+            //file.Write(sb.ToString());
+           // file.Close();
+
+            string text = sb.ToString();
+            text.Replace("article", "~");
+            List<string> all = text.Split('~').ToList();
+
+            StringBuilder articles = new StringBuilder();
+            
+
+            foreach (string item in all)
+            {
+                if (item.Contains("team-vs-team"))
+                {
+                    articles.Append(item);
+                }
+            }
+            string s = articles.Replace("<a", "^").Replace("</a>", "^").ToString();
+            List<string> ashki = s.Split('^').ToList();
+
+            string ashka="";
+
+            foreach (string item in ashki)
+            {
+                if (item.Contains("team-vs-team"))
+                {
+                    ashka = item;
+                }
+            }
+            List<string> need = new List<string>();
+            need = ashka.Replace("<div", "~").Replace("</div>", "~").Split('~').ToList();
+
+            foreach (string item in need)
+            {
+                file.Write(item);
+            }
+           
+             file.Close();
+
         }
 
         public static double GetRandomNumber(double minimum, double maximum)
